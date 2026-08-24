@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Hands-on management for distinctive voices across social media."
+    />
+    <meta name="theme-color" content="#efefe6" />
+    <meta property="og:title" content="Outlier Talent" />
+    <meta
+      property="og:description"
+      content="Hands-on management for distinctive voices across social media."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/outlier-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css?v=6" />
+    <script src="script.js?v=6" defer></script>
+    <title>Outlier Talent</title>
+  </head>
+  <body>
+    <svg class="icon-sprite" aria-hidden="true">
+      <symbol id="arrow-up-right-icon" viewBox="0 0 256 256">
+        <path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z" />
+      </symbol>
+    </svg>
+
+    <div class="site-shell">
+      <header class="site-header" aria-label="Primary navigation">
+        <nav class="social-nav" aria-label="Social links">
+          <a
+            href="https://www.instagram.com/outliertalent/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Instagram
+          </a>
+          <a
+            href="https://www.linkedin.com/company/outlier-talent/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+        </nav>
+      </header>
+
+      <main class="hero">
+        <section class="hero-copy" aria-labelledby="hero-title">
+          <h1 id="hero-title">
+            <span class="headline-line">Representing the</span>
+            <span class="headline-line">unusually good.</span>
+          </h1>
+          <p class="hero-intro">
+            Hands-on management for distinctive voices across&nbsp;social media.
+          </p>
+          <div class="hero-actions">
+            <button class="primary-action" type="button" data-open-roster>
+              Request our roster
+              <svg class="action-arrow" aria-hidden="true" viewBox="0 0 256 256">
+                <use href="#arrow-up-right-icon"></use>
+              </svg>
+            </button>
+          </div>
+        </section>
+
+        <div class="mark-stage" aria-hidden="true">
+          <div class="mark-halo"></div>
+          <div class="mark-emblem">
+            <svg class="brand-mark-vector" viewBox="0 0 593 593" focusable="false">
+              <g class="brand-orbit">
+                <path
+                  class="brand-ring-vector"
+                  d="M 444.37 229.11 A 162.5 162.5 0 1 1 361.3 147.48"
+                  pathLength="1"
+                />
+                <circle class="brand-dot-vector" cx="410.79" cy="181.23" r="27.36" />
+              </g>
+            </svg>
+          </div>
+        </div>
+
+      </main>
+    </div>
+
+    <div
+      class="roster-dialog"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="roster-title"
+      hidden
+    >
+      <div class="dialog-panel">
+        <header class="dialog-header">
+          <button class="icon-button" type="button" data-close-roster aria-label="Close roster request"></button>
+        </header>
+
+        <div class="dialog-body" data-form-view>
+          <h2 id="roster-title">Request our roster.</h2>
+          <p class="dialog-intro">
+            Share a little about the brief. We’ll send the most relevant creator profiles and campaign context.
+          </p>
+
+          <form
+            class="roster-form"
+            action="https://formsubmit.co/aaron@outliertalent.com"
+            method="POST"
+            data-roster-form
+            data-endpoint="https://formsubmit.co/ajax/aaron@outliertalent.com"
+            novalidate
+          >
+            <input type="hidden" name="_subject" value="New Outlier Talent roster request" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_url" value="https://outliertalent.com/" />
+            <input
+              class="honeypot"
+              name="_honey"
+              type="text"
+              tabindex="-1"
+              autocomplete="off"
+              aria-hidden="true"
+            />
+            <p class="form-error" role="alert" data-form-error hidden>
+              Complete the required fields.
+            </p>
+            <div class="field-row">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="email">Work email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="company">Company or brand</label>
+              <input id="company" name="company" type="text" autocomplete="organization" required />
+            </div>
+
+            <div class="field">
+              <label for="brief">What are you looking for?</label>
+              <select id="brief" name="brief" required>
+                <option value="">Select one</option>
+                <option>Paid social campaign</option>
+                <option>Organic creator partnership</option>
+                <option>Event or appearance</option>
+                <option>Long-term ambassador</option>
+                <option>Something else</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="notes">Brief details <span>(optional)</span></label>
+              <textarea
+                id="notes"
+                name="notes"
+                rows="3"
+                placeholder="Timing, audience, deliverables, or budget range"
+              ></textarea>
+            </div>
+
+            <button class="submit-action" type="submit">
+              <span class="submit-label">Submit request</span>
+              <svg class="action-arrow" aria-hidden="true" viewBox="0 0 256 256">
+                <use href="#arrow-up-right-icon"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <div class="success-view" data-success-view hidden>
+          <p class="success-label">Request received</p>
+          <h2>Thank you.</h2>
+          <p>We’ll follow up with the most relevant creator profiles.</p>
+          <button class="text-action success-close" type="button" data-close-roster>Back to site</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

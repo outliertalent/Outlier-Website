@@ -1,0 +1,10 @@
+{
+  "name": "outlier-talent-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Minimal one-page website for Outlier Talent",
+  "scripts": {
+    "start": "python -m http.server 4173",
+    "check": "node --check script.js"
+  }
+}
